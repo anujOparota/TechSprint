@@ -1,0 +1,80 @@
+.aid-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.aid-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #0b3c6f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.aid-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.aid-warning {
+  background: #fff4e5;
+  border-left: 5px solid #f59e0b;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.aid-steps {
+  list-style: none;
+  padding: 0;
+}
+
+.aid-step {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  background: #f7f9fc;
+  border-radius: 12px;
+}
+
+.aid-step span {
+  width: 32px;
+  height: 32px;
+  background: #0b3c6f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.aid-emergency-btn {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.aid-emergency-btn a {
+  background: #d32f2f;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ACCENTS */
+.aid-accent-heart span { background: #d32f2f; }
+.aid-accent-burns span { background: #ef6c00; }
+.aid-accent-bleeding span { background: #c62828; }
+.aid-accent-snake span { background: #2e7d32; }
+.aid-accent-road span { background: #455a64; }
+.aid-accent-unconscious span { background: #6a1b9a; }
+.aid-accent-choking span { background: #0277bd; }
+.aid-accent-poison span { background: #5d4037; }
