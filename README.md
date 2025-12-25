@@ -1,16 +1,212 @@
-# React + Vite
+# 🏥 AI-Assisted Healthcare Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered healthcare platform built with **React (Vite)** and **Firebase**, designed to help users manage appointments, get emergency assistance, inquire about medicines, create health routines, and maintain medical records — all in one place.
 
-Currently, two official plugins are available:
+This project is being developed as part of a **hackathon / academic project** with a focus on **Google technologies** and **AI integration**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔐 Authentication
 
-## Expanding the ESLint configuration
+- User Login & Registration
+- Firebase Authentication
+- Protected routes for authenticated users
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 Dashboard
+
+- Central hub to access all features:
+  - Appointments
+  - Emergency
+  - Medicine Inquiry
+  - Routine Creator
+  - Notifications
+  - User Records
+
+### 📅 Appointments
+
+- Book new appointments
+- View previously booked appointments
+
+### 🚨 Emergency Module
+
+- Emergency landing page with 3 options:
+  - 🩹 First Aid guidance (AI-assisted)
+  - 🚑 Ambulance request
+  - 🩸 Blood request
+
+### 💊 Medicine Inquiry
+
+- Ask questions about medicines
+- AI-powered responses (via Google Gemini)
+
+### 🧠 Routine Creator
+
+- Generate 7-day / 30-day health routines
+- AI-generated and stored for future access
+
+### 🔔 Notifications
+
+- View important health alerts and updates
+
+### 📁 User Records
+
+- User profile
+- View past medical records and uploaded reports
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React (Vite)
+- JavaScript
+- React Router DOM
+
+### Backend / Services
+
+- Firebase Authentication
+- Firebase Firestore
+- Firebase Storage
+- Firebase Hosting (planned)
+
+### AI Integration
+
+- Google Gemini API (via backend / Cloud Functions)
+
+### Version Control
+
+- Git & GitHub
+
+---
+
+## 📁 Project Structure
+
+src/
+
+├── assets/
+
+├── components/
+
+├── context/
+
+├── hooks/
+
+├── pages/
+
+│   ├── Appointment/
+
+│   │     ├── Appointments.jsx
+
+│   │     └── Appointments.css
+
+│   ├── Auth/
+
+│   │     ├── Login.jsx
+
+│   │     ├── Register.jsx
+
+│   │     └── Auth.css
+
+│   ├── Dashboard/
+
+│   │     ├── Dashboard.jsx
+
+│   │     └── Dashboard.css
+
+│   ├── Emergency/
+
+│   │     ├── Emergency.jsx
+
+│   │     ├── FirstAid.jsx
+
+│   │     └── BloodRequest.jsx
+
+│   ├── Medicine/
+
+│   │     └── MedicineInquiry.jsx
+
+│   ├── Notification/
+
+│   │     └── Notification.jsx
+
+│   ├── Routine/
+
+│   │     └── RoutineCreate.jsx
+
+│   └── UserProfile/
+
+│         └── UserRecord.jsx
+
+├── services/
+
+├── utils/
+
+├── App.jsx
+
+├── App.css
+
+├── index.css
+
+└── main.jsx
+
+---
+
+## ⚙️ Environment Variables
+
+This project uses environment variables for configuration.
+
+Create a `.env.local` file in the root directory:
+-------------------------------------
+
+VITE_FIREBASE_API_KEY=your_key
+
+VITE_FIREBASE_AUTH_DOMAIN=your_domain
+
+VITE_FIREBASE_PROJECT_ID=your_project_id
+
+VITE_FIREBASE_STORAGE_BUCKET=your_bucket
+
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+
+VITE_FIREBASE_APP_ID=your_app_id
+
+📌 **Note:**
+
+- `.env` and `.env.local` are ignored using `.gitignore`
+- Never push API keys to GitHub
+
+---
+
+## ▶️ How to Run the Project
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
+
+
+2. Install dependencies
+
+npm install
+
+3. Add environment variables in `.env.local`
+4. Start the development server
+
+npm run dev
+
+---
+
+## ⚠️ Disclaimer
+
+This application provides AI-assisted guidance only and is **not a replacement for professional medical advice**.
+-------------------------------------------------------------------------------------------------------------
+
+## 📌 Project Status
+
+- ✅ Project structure completed
+- 🟡 Features under development
+- 🔜 AI integration planned
