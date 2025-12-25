@@ -8,6 +8,7 @@ import Emergency from "./pages/Emergency/Emergency";
 import FirstAidPg from "./pages/Emergency/First_Aid/FirstAid";
 import AmbulancePg from "./pages/Emergency/Ambulance/Ambulance";
 import Bloodpg from "./pages/Emergency/BloodBank/BloodBank";
+import BookAppointment from "./pages/Appointment/BookAppointment/BookAppointment";
 import './App.css'
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/firstaid" element={<FirstAidPg/>}/>
         <Route path="/ambulance" element={<AmbulancePg/>}/>
         <Route path="/blood" element={<Bloodpg/>}/>
-
+        <Route path="/bookappointment" element={<BookAppointment/>}/>
       </Routes>
     </BrowserRouter>
   );

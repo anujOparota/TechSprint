@@ -10,8 +10,9 @@ function Appointments() {
                 <div id="btn-box">
                     <button 
                         type="submit" 
-                        id="appoint-btn1" >
-                        Book An Appointment
+                        id="appoint-btn1"
+                    >
+                        <a href='/bookappointment'>Book An Appointment</a>
                     </button>
                     <button 
                         type="submit" 

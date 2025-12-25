@@ -1,0 +1,89 @@
+#BookAppointment-hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f9ff;
+}
+
+/* Form Card */
+.BookAppointment-form {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.BookAppointment-form h2 {
+    text-align: center;
+    color: #0874f8;
+    margin-bottom: 10px;
+}
+
+/* Input rows */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+#gender-select{
+    flex: 1;
+    padding: 0px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    outline: none;
+    width: 300px;
+    height: 35px;
+    color:rgb(124, 113, 113);
+    background-color:#cecece;
+}
+
+.form-row input:focus {
+    border-color: #0874f8;
+}
+
+/* Button */
+#BookAppointment-btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #00ce89;
+    font-size: 0.95rem;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#BookAppointment-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,206,137,0.35);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
