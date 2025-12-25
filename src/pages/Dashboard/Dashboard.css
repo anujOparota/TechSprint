@@ -1,0 +1,44 @@
+#dashboard-divs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.dash-box{
+    width: 200px;
+    height: 200px;
+    /* background-image: linear-gradient(45deg, #fc00ff 0%, #ff5858 50%, #0B54FE 100%); */
+    background-color: #c4ddfc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-direction: column;
+    border-radius: 10%;
+    padding-top: 20px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.dash-box:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: translateY(5px);
+}
+.dash-box.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+img{
+    max-width: 140px;
+    border-radius: 10%;
+}
+
+
+
+
+
+
