@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 // images
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.png";
 import "./Ambulance.css";
-import location from "../../assets/images/location.png";
-import call from "../../assets/images/call.png";
-import bus from "../../assets/images/road_acc.png";
+import location from "../../../assets/images/location.png";
+import call from "../../../assets/images/call.png";
+import bus from "../../../assets/images/road_acc.png";
 
 export default function FirstAid() {
   return (

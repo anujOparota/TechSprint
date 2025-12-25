@@ -2,17 +2,17 @@ import "./FirstAid.css";
 import { Link } from "react-router-dom";
 
 // images
-import logo from "../../assets/images/logo.png";
-import roadAcc from "../../assets/images/road_acc.png";
-import snake from "../../assets/images/snake.png";
-import burning from "../../assets/images/burning.png";
-import bleeding from "../../assets/images/bleeding.png";
-import unconscious from "../../assets/images/unconcious.png";
-import heart from "../../assets/images/heart.png";
-import choking from "../../assets/images/choking.png";
-import poisoning from "../../assets/images/poisoning.png";
-import Ambulance from "../../assets/images/Ambulance.png";
-import bloodbank from "../../assets/images/blood_bank.png";
+import logo from "../../../assets/images/logo.png";
+import roadAcc from "../../../assets/images/road_acc.png";
+import snake from "../../../assets/images/snake.png";
+import burning from "../../../assets/images/burning.png";
+import bleeding from "../../../assets/images/bleeding.png";
+import unconscious from "../../../assets/images/unconcious.png";
+import heart from "../../../assets/images/heart.png";
+import choking from "../../../assets/images/choking.png";
+import poisoning from "../../../assets/images/poisoning.png";
+import Ambulance from "../../../assets/images/Ambulance.png";
+import bloodbank from "../../../assets/images/blood_bank.png";
 
 ///////////////////////////////////////////////////////////////
 

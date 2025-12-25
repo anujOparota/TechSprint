@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.png";
 import "./BloodBank.css";
-import location from "../../assets/images/location.png";
-import call from "../../assets/images/call.png";
-import green_valley from "../../assets/images/Green_valley.png";
-import city_care from "../../assets/images/city_care.png";
-import downtown from "../../assets/images/downtown.png";
+import location from "../../../assets/images/location.png";
+import call from "../../../assets/images/call.png";
+import green_valley from "../../../assets/images/Green_valley.png";
+import city_care from "../../../assets/images/city_care.png";
+import downtown from "../../../assets/images/downtown.png";
 
 export default function BloodBank() {
   const [selectedGroup, setSelectedGroup] = useState(null);
