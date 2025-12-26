@@ -25,7 +25,7 @@ function Register() {
                 </button>
             </form>
 
-            <p onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
+            <p onClick={() => navigate("/login")} style={{ cursor: "pointer" }}>
                 Already have an account? <b>Login</b>
             </p>
         </div>
