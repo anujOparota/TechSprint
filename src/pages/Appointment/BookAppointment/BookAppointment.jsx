@@ -6,12 +6,20 @@ function BookAppointment() {
 
     return(
         <div id="BookAppointment-hero">
-            <form className="BookAppointment-form">
+            <div className="hero-content">
+                <form className="BookAppointment-form">
 
                 <h2>Book Appointment</h2>
 
                 <div className="form-row">
-                    <input type="text" placeholder="Doctor Name" />
+                    <select name="doctor-name" id="doctor-select">
+                        <option value="doctor101">Dr. Anuj Parota</option>
+                        <option value="doctor102">Dr. Suyash Pawar</option>
+                        <option value="doctor103">Dr. Om Nimbarte</option>
+                        <option value="doctor104">Dr. Mohit Soni</option>
+                        <option value="doctor105">Dr. Rajeev Shrma</option>
+                        <option value="doctor106">Dr. Usha Agrwal</option>
+                    </select>
                     <input type="text" placeholder="Patient Name" />
                 </div>
 
@@ -33,6 +41,7 @@ function BookAppointment() {
                     Book Appointment
                 </button>
             </form>
+            </div>
         </div>
     );
 }

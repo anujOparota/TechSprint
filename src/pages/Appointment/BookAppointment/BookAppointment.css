@@ -1,3 +1,10 @@
+/* FORCE consistent box sizing */
+#BookAppointment-hero,
+#BookAppointment-hero * {
+    box-sizing: border-box;
+}
+
+/* Page wrapper */
 #BookAppointment-hero {
     width: 100%;
     min-height: 100vh;
@@ -5,15 +12,16 @@
     align-items: center;
     justify-content: center;
     background: #f4f9ff;
+    padding: 20px;
 }
 
-/* Form Card */
+/* Card */
 .BookAppointment-form {
-    background: white;
-    padding: 20px;
+    background: #ffffff;
+    padding: 22px;
     border-radius: 14px;
     width: 100%;
-    max-width: 460px;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -23,62 +31,65 @@
 .BookAppointment-form h2 {
     text-align: center;
     color: #0874f8;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-/* Input rows */
+/* Rows */
 .form-row {
     display: flex;
-    gap: 15px;
+    gap: 14px;
+    width: 100%;
 }
 
-.form-row input {
+/* IMPORTANT: allow flex children to shrink */
+.form-row > * {
     flex: 1;
-    padding: 12px 14px;
+    min-width: 0;
+    width: 100%;
+}
+
+/* INPUT + SELECT — SAME RULE */
+.form-row input,
+.form-row select {
+    width: 100%;
+    height: 44px;
+    padding: 10px 14px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     outline: none;
+    background-color: #fff;
+    color: #222;
+
+    /* CRITICAL for select responsiveness */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-#gender-select{
-    flex: 1;
-    padding: 0px 14px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 0.9rem;
-    outline: none;
-    width: 300px;
-    height: 35px;
-    color:rgb(124, 113, 113);
-    background-color:#cecece;
+/* REMOVE old constraints */
+#doctor-select,
+#gender-select {
+    max-width: none;
 }
 
-.form-row input:focus {
+/* Focus */
+.form-row input:focus,
+.form-row select:focus {
     border-color: #0874f8;
 }
 
 /* Button */
 #BookAppointment-btn {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: #00ce89;
-    font-size: 0.95rem;
+    margin-top: 6px;
     height: 50px;
     width: 100%;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    background: #00ce89;
+    color: white;
     font-weight: 600;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-#BookAppointment-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,206,137,0.35);
+    cursor: pointer;
 }
 
 /* Mobile */
