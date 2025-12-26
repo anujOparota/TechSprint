@@ -20,7 +20,7 @@
   flex-direction: column;
 }
 
-input{
+.Auth-input{
   width: 300px;
   height: 35px;
   color:black;
@@ -33,9 +33,16 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 8px;
+  border: 1px solid transparent;
   color: white;
   background-color: #00ce89;
-  font-size: small;
+  font-size: medium;
   height: 50px;
   width: 320px;
+  transition: border-color 0.25s;
+}
+
+.Auth-btn:hover{
+  border-color: #454dda;
 }

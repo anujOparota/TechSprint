@@ -13,12 +13,12 @@ function Register() {
 
     return (
         <div className="Auth-div">
-            <h2>Register</h2>
+            <h2>REGISTER</h2>
 
             <form className="Auth-form" onSubmit={handleRegister}>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" className='Auth-input' />
                 <br />
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" className='Auth-input' />
                 <br />
                 <button type="submit" className="Auth-btn">
                     Register

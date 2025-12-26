@@ -16,11 +16,11 @@ function Login() {
             <h2>LOGIN</h2>
 
             <form className="Auth-form" onSubmit={handleLogin}>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" className='Auth-input' />
                 <br />
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" className='Auth-input' />
                 <br />
-                <button type="submit" className="Auth-btn">
+                <button type="submit" className="Auth-btn" >
                     Login
                 </button>
             </form>
