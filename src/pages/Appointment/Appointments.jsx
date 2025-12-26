@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom'   
 import './Appointments.css'
 import Doctor from '../../assets/Doctor.png'
+import NavBar from '../../components/Navbar'
+
 
 function Appointments() {
   return (
+    <>
+    <NavBar/>
     <section className="appointment-hero" aria-labelledby="appointments-heading">
       <div className="hero-inner">
         <div id="hero-content">
@@ -37,7 +41,8 @@ function Appointments() {
         </figure>
       </div>
     </section>
-  )
+    </>
+  );
 }
 
 export default Appointments

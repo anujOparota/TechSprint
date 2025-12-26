@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import './BookAppointment.css'
+import NavBar from "../../../components/Navbar";
 
 function BookAppointment() {
     const navigate = useNavigate();
 
     return(
+        <>
+        <NavBar/>
         <div id="BookAppointment-hero">
             <div className="hero-content">
                 <form className="BookAppointment-form">
@@ -43,6 +46,7 @@ function BookAppointment() {
             </form>
             </div>
         </div>
+        </>
     );
 }
 

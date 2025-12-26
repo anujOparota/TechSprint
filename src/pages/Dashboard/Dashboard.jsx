@@ -6,6 +6,7 @@ import medicineInquiry from '../../assets/medicine inquiry.jpg'
 import createRoutine from '../../assets/create routine.jpg'
 import notification from '../../assets/notification.jpg'
 import userProfile from '../../assets/user record.png'
+import NavBar from "../../components/Navbar";
 
 
 import './Dashboard.css'
@@ -14,6 +15,8 @@ function Dashboard() {
     const navigate = useNavigate();
 
     return (
+        <>
+        <NavBar/>
         <div id="dashboard-divs" >
             <div
                 className="dash-box"
@@ -56,6 +59,7 @@ function Dashboard() {
                 <p>UserProfile</p>
             </div>
         </div>
+        </>
     );
 }
 

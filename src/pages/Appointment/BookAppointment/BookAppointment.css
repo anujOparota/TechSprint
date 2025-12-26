@@ -1,4 +1,3 @@
-/* FORCE consistent box sizing */
 #BookAppointment-hero,
 #BookAppointment-hero * {
     box-sizing: border-box;
@@ -67,19 +66,16 @@
     -moz-appearance: none;
 }
 
-/* REMOVE old constraints */
 #doctor-select,
 #gender-select {
     max-width: none;
 }
 
-/* Focus */
 .form-row input:focus,
 .form-row select:focus {
     border-color: #0874f8;
 }
 
-/* Button */
 #BookAppointment-btn {
     margin-top: 6px;
     height: 50px;
@@ -92,7 +88,6 @@
     cursor: pointer;
 }
 
-/* Mobile */
 @media (max-width: 500px) {
     .form-row {
         flex-direction: column;
