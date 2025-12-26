@@ -7,6 +7,7 @@ import createRoutine from '../../assets/create routine.jpg'
 import notification from '../../assets/notification.jpg'
 import userProfile from '../../assets/user record.png'
 import NavBar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 
 import './Dashboard.css'
@@ -59,6 +60,7 @@ function Dashboard() {
                 <p>UserProfile</p>
             </div>
         </div>
+        <Footer/>
         </>
     );
 }
