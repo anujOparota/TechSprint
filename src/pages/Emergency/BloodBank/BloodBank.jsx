@@ -11,40 +11,68 @@ import downtown from "../../../assets/images/downtown.png";
 
 export default function BloodBank() {
   const [selectedGroup, setSelectedGroup] = useState(null);
+  const [mapUrl, setMapUrl] = useState(null);
+  const [hasLocation, setHasLocation] = useState(false);
+
+  const canShowResults = selectedGroup && hasLocation;
+
+  const handleUseLocation = () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+
+        const url = `https://www.google.com/maps?q=hospitals+near+${latitude},${longitude}&output=embed`;
+        setMapUrl(url);
+        setHasLocation(true);
+      },
+      () => {
+        alert("Unable to fetch your location");
+        setHasLocation(false);
+      }
+    );
+  };
 
   return (
-    <div className="page">
-
+    <div className="bb-page">
       {/* ================= HEADER ================= */}
-      <div className="header">
-        <div className="lo_name">
-          <div className="logo">
+      <div className="bb-header">
+        <div className="bb-lo_name">
+          <div className="bb-logo">
             <img src={logo} alt="Emergency" />
           </div>
-          <div className="name">
-            <div className="n1">
+          <div className="bb-name">
+            <div className="bb-n1">
               <h1>BloodBank Services</h1>
             </div>
-            <div className="n2">Find Nearby Blood Banks</div>
+            <div className="bb-n2">Find Nearby Blood Banks</div>
           </div>
         </div>
       </div>
 
       {/* ================= MAIN ================= */}
-      <div className="main">
-
+      <div className="bb-main">
         {/* ================= Emergency Bar ================= */}
-        <div className="head_emerbar">
-
-          <div className="emergency-bar3">
-            <div className="eme3 loc">
-              <Link to="#" onClick={() => alert("Choose your location")}>
+        <div className="bb-head_emerbar">
+          <div className="bb-emergency-bar3">
+            <div className="bb-eme3 bb-loc">
+              <Link
+                to="#"
+                onClick={() => {
+                  alert("Setting your current location.");
+                  handleUseLocation();
+                }}
+              >
                 <img src={location} alt="Location" />
                 <span>Use Current Location</span>
               </Link>
             </div>
 
-            <div className="eme3 call loc3">
+            <div className="bb-eme3 bb-call bb-loc3">
               <a href="tel:112">
                 <img src={call} alt="Call" />
                 <span>Emergency Blood Request</span>
@@ -53,13 +81,15 @@ export default function BloodBank() {
           </div>
 
           {/* Blood Group Buttons */}
-          <div className="blood_group">
-            {["A+","A-","B+","B-","AB+","AB-","O+","O-"].map(group => (
+          <div className="bb-blood_group">
+            {["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"].map((group) => (
               <button
                 key={group}
-                className={`grpbut ${selectedGroup === group ? "active" : ""}`}
+                className={`bb-grpbut ${
+                  selectedGroup === group ? "active" : ""
+                }`}
                 onClick={() =>
-                  setSelectedGroup(prev => (prev === group ? null : group))
+                  setSelectedGroup((prev) => (prev === group ? null : group))
                 }
               >
                 {group}
@@ -67,26 +97,27 @@ export default function BloodBank() {
             ))}
           </div>
 
-          {/* Instruction text (shown only before selection) */}
-          {!selectedGroup && (
-            <div className="warning">
-              <h2>Choose your blood group</h2>
-              <p>Blood banks will appear after selection</p>
+          {/* Instruction text */}
+          {!canShowResults && (
+            <div className="bb-warning">
+              <h2>Select Blood Group & Location</h2>
+              <p>
+                Please choose a blood group and use your current location
+                to view nearby blood banks.
+              </p>
             </div>
           )}
-        </div>
+        </div> {/* ✅ FIXED: closing bb-head_emerbar */}
 
         {/* ================= BloodBank Content ================= */}
-        {selectedGroup && (
-          <div className="bloodbank-content">
-
-            <div className="bloodbank-cont-head">
+        {canShowResults && (
+          <div className="bb-bloodbank-content">
+            <div className="bb-bloodbank-cont-head">
               <h2>Nearby Blood Banks</h2>
             </div>
 
-            <div className="List-Map">
-
-              <div className="bloodbank-list">
+            <div className="bb-List-Map">
+              <div className="bb-bloodbank-list">
                 <BloodBankCard
                   img={green_valley}
                   title="Green Valley Blood Bank"
@@ -112,28 +143,52 @@ export default function BloodBank() {
                 />
               </div>
 
-              <div className="BloodBank-Map">
-                <iframe
-                  title="map"
-                  src="https://www.google.com/maps/embed?pb=..."
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                />
+              <div className="bb-BloodBank-Map">
+                {mapUrl ? (
+                  <iframe
+                    title="map"
+                    src={mapUrl}
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="bb-map-placeholder">
+                    <span className="bb-map-icon">🗺️</span>
+                    <h3>Map not loaded yet</h3>
+                    <p>
+                      Select a blood bank or use your current location
+                      <br />
+                      to view it on the map.
+                    </p>
+                  </div>
+                )}
               </div>
-
             </div>
           </div>
         )}
       </div>
 
       {/* ================= FOOTER ================= */}
-      <div className="bfoot">
-        <div className="bloodfoot">
-          ⚠️ For critical cases, contact hospitals immediately
+      <div className="bb-bfoot">
+        <div className="bb-footer-wrapper">
+
+          <div className="bb-footer-alert">
+            ⚠️ For critical cases, contact the nearest hospital immediately
+          </div>
+
+          <div className="bb-footer-actions">
+            <a href="tel:112" className="bb-footer-call">
+              ☎ Call Emergency (112)
+            </a>
+            <span className="bb-footer-note">
+              Blood availability may change in real time
+            </span>
+          </div>
+
         </div>
       </div>
-
     </div>
   );
 }
@@ -148,29 +203,31 @@ function BloodBankCard({ img, title, dist, status, hospital }) {
   };
 
   return (
-    <div className="bloodbank-card-pro">
-      <div className="bloodbank-img">
+    <div className="bb-bloodbank-card-pro">
+      <div className="bb-bloodbank-img">
         <img src={img} alt={title} />
       </div>
 
-      <div className="bloodbank-info">
-        <div className="bloodbank-header">
+      <div className="bb-bloodbank-info">
+        <div className="bb-bloodbank-header">
           <h3>{title}</h3>
         </div>
 
-        <div className="bloodbank-row">
+        <div className="bb-bloodbank-row">
           <span>📍 {dist} away</span>
         </div>
 
-        <div className="bloodbank-row">
+        <div className="bb-bloodbank-row bb-hosp">
           <span>🏥 Linked Hospital: {hospital}</span>
         </div>
       </div>
 
-      <div className="bloodbank-cont-right">
-        <span className={`stock ${status}`}>{stockText[status]}</span>
+      <div className="bb-bloodbank-cont-right">
+        <span className={`bb-stock ${status}`}>
+          {stockText[status]}
+        </span>
         <button
-          className="track-btn"
+          className="bb-track-btn"
           onClick={() => alert(`Calling BloodBank of ${hospital}`)}
         >
           ☎ Call

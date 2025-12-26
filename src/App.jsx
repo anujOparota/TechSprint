@@ -9,6 +9,16 @@ import FirstAidPg from "./pages/Emergency/First_Aid/FirstAid";
 import AmbulancePg from "./pages/Emergency/Ambulance/Ambulance";
 import Bloodpg from "./pages/Emergency/BloodBank/BloodBank";
 import BookAppointment from "./pages/Appointment/BookAppointment/BookAppointment";
+
+
+import Burns from "../src/pages/Emergency/First_Aid/Burns";
+import Bleeding from "../src/pages/Emergency/First_Aid/Bleeding";
+import Unconscious from "../src/pages/Emergency/First_Aid/Unconscious";
+import Heart from "../src/pages/Emergency/First_Aid/Heart";
+import SnakeBite from "../src/pages/Emergency/First_Aid/SnakeBite";
+import RoadAccident from "../src/pages/Emergency/First_Aid/RoadAccident";
+import Choking from "../src/pages/Emergency/First_Aid/Choking";
+import Poisoning from "../src/pages/Emergency/First_Aid/Poisoning";
 import './App.css'
 
 function App() {
@@ -22,8 +32,18 @@ function App() {
         <Route path="/emergency" element={<Emergency/>}/>
         <Route path="/firstaid" element={<FirstAidPg/>}/>
         <Route path="/ambulance" element={<AmbulancePg/>}/>
-        <Route path="/blood" element={<Bloodpg/>}/>
+        <Route path="/bloodbank" element={<Bloodpg/>}/>
         <Route path="/bookappointment" element={<BookAppointment/>}/>
+
+
+        <Route path="/first-aid/burns" element={<Burns />} />
+        <Route path="/first-aid/bleeding" element={<Bleeding />} />
+        <Route path="/first-aid/unconscious" element={<Unconscious />} />
+        <Route path="/first-aid/heart" element={<Heart />} />
+        <Route path="/first-aid/snake-bite" element={<SnakeBite />} />
+        <Route path="/first-aid/road-accident" element={<RoadAccident />} />
+        <Route path="/first-aid/choking" element={<Choking />} />
+        <Route path="/first-aid/poisoning" element={<Poisoning />} />
       </Routes>
     </BrowserRouter>
   );
