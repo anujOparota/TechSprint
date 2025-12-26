@@ -5,14 +5,21 @@
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  color: #000204;
 }
 
 .aid-back {
   display: inline-block;
   margin-bottom: 20px;
-  color: #0b3c6f;
+  background-color: rgb(52, 56, 61);
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px 12px;
+  font-size: 18px;
 }
 
 .aid-title {
