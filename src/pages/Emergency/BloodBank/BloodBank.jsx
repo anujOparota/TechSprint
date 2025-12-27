@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../../../assets/images/logo.png";
 import "./BloodBank.css";
@@ -13,6 +14,8 @@ export default function BloodBank() {
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [mapUrl, setMapUrl] = useState(null);
   const [hasLocation, setHasLocation] = useState(false);
+
+  const navigate = useNavigate()
 
   const canShowResults = selectedGroup && hasLocation;
 
@@ -52,6 +55,11 @@ export default function BloodBank() {
             <div className="bb-n2">Find Nearby Blood Banks</div>
           </div>
         </div>
+      </div>
+
+      {/* ================= BACK ================= */}
+      <div className="Back">
+        <button className="bb-back_btn" onClick={() => navigate(-1)}> Back </button>
       </div>
 
       {/* ================= MAIN ================= */}

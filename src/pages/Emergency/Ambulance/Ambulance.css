@@ -306,3 +306,16 @@
   }
 }
 
+
+/********  Back  *********/
+
+.ambl-back_btn{
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px 13px;
+  font-size: 20px;
+  cursor: pointer;
+}

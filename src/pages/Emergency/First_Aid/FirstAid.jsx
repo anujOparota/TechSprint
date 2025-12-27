@@ -1,5 +1,5 @@
 import "./FirstAid.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // images
 import logo from "../../../assets/images/logo.png";
@@ -15,6 +15,7 @@ import Ambulance from "../../../assets/images/Ambulance.png";
 import bloodbank from "../../../assets/images/blood_bank.png";
 
 export default function FirstAid() {
+  const navigate = useNavigate();
   return (
     <div className="firstaid-page">
 
@@ -37,6 +38,15 @@ export default function FirstAid() {
 
         </div>
       </div>
+
+{/* ================= BACK ================= */}
+      <div className="Back">
+        <div className="Back">
+        <button className="firstaid-back_btn" onClick={() => navigate(-1)}> Back </button>
+      </div>
+      
+      </div>
+      
 
       {/* ================= MAIN ================= */}
       <div className="firstaid-main">
