@@ -7,6 +7,7 @@ import createRoutine from '../../assets/create routine.jpg'
 import notification from '../../assets/notification.jpg'
 import userProfile from '../../assets/user record.png'
 import NavBar from "../../components/Navbar";
+import chatBot from "../../assets/chatBot.png";
 import Footer from "../../components/Footer";
 
 
@@ -44,6 +45,19 @@ function Dashboard() {
                 <img src={medicineInquiry} alt="medicine-image" className="dash-img"/>
                 <p>Medicine Inquiry</p>
             </div>
+
+            {/* This is the AI Assistant section */}
+             <div
+                className="dash-box"
+                id="aiChatBot-div"
+                onClick={() => navigate("")}
+                style={{ cursor: "pointer" }}
+            >
+                <img src={chatBot} alt="aiChatBot image" className="dash-img" />
+                <p>AI Assistant</p>
+
+            </div>
+            {/* Suyash added this section Ends */}
 
             <div className="dash-box" id="createRoutine-div">
                 <img src={createRoutine} alt="CreateRoutine-image" className="dash-img" />
