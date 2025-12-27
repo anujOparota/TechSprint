@@ -2,38 +2,34 @@ const inputMessage = document.getElementById("inputMessage");
 const sendBtn = document.getElementById("sendBtn");
 const chatbox = document.getElementById("chatbox");
 
+function appendMessage(text, sender) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("message", sender);
 
-function appendMessage(text,sender){
-    const msgDiv =document.createElement("div");
-    msgDiv.classList.add("message",sender);
-
-    const textBubble=document.createElement("span");
+    const textBubble = document.createElement("span");
     textBubble.classList.add("text-bubble");
-    textBubble.textContent=text;
+    textBubble.textContent = text;
 
-    if(sender=="bot"){
-        const iconImg=document.createElement("img");
-        iconImg.src="logo.jpeg"
+    if (sender === "bot") {
+        const iconImg = document.createElement("img");
+        iconImg.src = "logo.jpeg";
         iconImg.classList.add("bot-chat-logo");
-        iconImg.alt="bot logo";
+        iconImg.alt = "bot logo";
         msgDiv.appendChild(iconImg);
     }
 
     msgDiv.appendChild(textBubble);
     chatbox.appendChild(msgDiv);
-    chatbox.scrollTop=chatbox.scrollHeight;
+    chatbox.scrollTop = chatbox.scrollHeight;
 }
 
+async function sendMessage() {
+    const message = inputMessage.value.trim();
+    if (!message) return;
 
-
-async function sendMessage(){
-    const message=inputMessage.value.trim();
-
-    if(!message) return ; 
-    appendMessage(message,"user");
+    appendMessage(message, "user");
     inputMessage.value = '';
-    sendBtn.disabled=true;
-
+    sendBtn.disabled = true;
 
     try {
         const response = await fetch('http://127.0.0.1:8000/chat', {
@@ -45,21 +41,16 @@ async function sendMessage(){
         if (!response.ok) throw new Error("Network response was not ok");
 
         const data = await response.json();
-
-        appendMessage(data.reply,"bot")
-
+        appendMessage(data.reply, "bot");
     } catch (error) {
-        appendMessage('Error: Could not reach the server.','bot');
-    } finally{
-        sendBtn.disabled=false;
+        appendMessage('Error: Could not reach the server.', 'bot');
+    } finally {
+        sendBtn.disabled = false;
         inputMessage.focus();
     }
-    
-
 }
 
-
-sendBtn.addEventListener("click",sendMessage)
-inputMessage.addEventListener("keypress",function (e){
+sendBtn.addEventListener("click", sendMessage);
+inputMessage.addEventListener("keypress", function (e) {
     if (e.key === "Enter") sendMessage();
-})
+});
