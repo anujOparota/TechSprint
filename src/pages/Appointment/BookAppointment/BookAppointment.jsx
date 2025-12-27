@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import './BookAppointment.css'
-import NavBar from "../../../components/Navbar";
+import NavBar from "../../../components/NavBar/NavBar";
 
 function BookAppointment() {
     const navigate = useNavigate();

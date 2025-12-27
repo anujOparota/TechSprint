@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import FirstAid from '../../assets/images/unconcious.png';
 import Ambulance from '../../assets/images/road_acc.png'
 import Blood from '../../assets/images/blood_bank.png'
-import NavBar from "../../components/Navbar";
+import NavBar from "../../components/NavBar/NavBar";
 
 import './Emergency.css'
 

@@ -1,0 +1,172 @@
+:root{
+  --sidebar-width: 260px;
+  --blue: #0874f8;
+  --blue-dark: #055bd6;
+  --green: #00ce89;
+  --bg-grad: linear-gradient(180deg, rgba(8,116,248,0.95), rgba(0,206,137,0.92));
+  --item-hover: rgba(255,255,255,0.08);
+  --glass: rgba(255,255,255,0.06);
+  --text-on-accent: #fff;
+}
+
+/* Sidebar container */
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--bg-grad);
+  color: var(--text-on-accent);
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.18);
+  z-index: 40;
+  transition: width 160ms ease;
+  box-sizing: border-box;
+}
+
+/* nav inside sidebar */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* each item */
+.sidebar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-on-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 140ms ease, transform 120ms ease, color 120ms ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* icon box to keep alignment */
+.sidebar-item .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+/* svg sizing and stroke color inherits from text color */
+.sidebar-item svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  color: inherit;
+}
+
+/* hide label in very small screens if needed (but CSS also switches layout) */
+.sidebar-item .label {
+  white-space: nowrap;
+}
+
+/* hover and focus */
+.sidebar-item:hover,
+.sidebar-item:focus {
+  background: var(--item-hover);
+  transform: translateY(-2px);
+}
+
+/* active link (NavLink sets aria-current or class depending on router; use :where to handle both) */
+.sidebar-item.active,
+.sidebar-item[aria-current="page"] {
+  background: white;
+  color: var(--blue-dark);
+  box-shadow: 0 8px 18px rgba(2,6,23,0.14);
+}
+
+.sidebar-item.active .icon,
+.sidebar-item[aria-current="page"] .icon {
+  background: linear-gradient(135deg, var(--green), #00b97b);
+  color: white;
+  box-shadow: 0 6px 16px rgba(0,206,137,0.14);
+}
+
+/* utility: shrink sidebar a bit on very small desktops */
+@media (max-width: 1100px) {
+  .sidebar { width: 220px; min-width: 220px; }
+}
+
+/* Responsive: bottom navigation on small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    width: 100%;
+    min-width: 0;
+    padding: 6px 10px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -6px 28px rgba(2,6,23,0.12);
+    z-index: 60;
+    background: linear-gradient(90deg, rgba(8,116,248,0.98), rgba(0,206,137,0.9));
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sidebar-item {
+    flex-direction: column;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    min-width: 44px;
+    gap: 6px;
+    color: white;
+  }
+
+  .sidebar-item .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  /* hide text labels on very small screens to save space */
+  .sidebar-item .label {
+    display: none;
+  }
+
+  /* make active icon more visible */
+  .sidebar-item.active .icon,
+  .sidebar-item[aria-current="page"] .icon {
+    background: white;
+    color: var(--blue-dark);
+  }
+}
+
+/* keyboard focus visible */
+.sidebar-item:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.12);
+  outline-offset: 4px;
+}

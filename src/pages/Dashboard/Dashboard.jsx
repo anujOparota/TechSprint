@@ -6,9 +6,9 @@ import medicineInquiry from '../../assets/medicine inquiry.jpg'
 import createRoutine from '../../assets/create routine.jpg'
 import notification from '../../assets/notification.jpg'
 import userProfile from '../../assets/user record.png'
-import NavBar from "../../components/Navbar";
+import NavBar from "../../components/NavBar/NavBar";
 import chatBot from "../../assets/chatBot.png";
-import Footer from "../../components/Footer";
+import Footer from '../../components/Footer/Footer';
 
 
 import './Dashboard.css'

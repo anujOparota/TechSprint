@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'   
 import './Appointments.css'
 import Doctor from '../../assets/Doctor.png'
-import NavBar from '../../components/Navbar'
+import NavBar from '../../components/NavBar/NavBar'
 
 
 function Appointments() {
