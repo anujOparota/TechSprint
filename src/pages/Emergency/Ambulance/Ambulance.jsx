@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../../../assets/images/logo.png";
 import "./Ambulance.css";
@@ -13,6 +14,8 @@ export default function Ambulance() {
   );
   const [mapLoading, setMapLoading] = useState(false);
   const [hasLocation, setHasLocation] = useState(false); // ✅ added
+
+  const navigate = useNavigate();
 
   const handleUseLocation = () => {
     if (!navigator.geolocation) {
@@ -54,6 +57,11 @@ export default function Ambulance() {
             <div className="ambl-n2">Find Nearby Ambulance in real-time</div>
           </div>
         </div>
+      </div>
+
+      {/* ================= BACK ================= */}
+      <div className="Back">
+        <button className="ambl-back_btn" onClick={() => navigate(-1)}> Back </button>
       </div>
 
       {/* ================= MAIN ================= */}
