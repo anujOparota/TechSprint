@@ -4,6 +4,7 @@ import FirstAid from '../../assets/images/unconcious.png';
 import Ambulance from '../../assets/images/road_acc.png'
 import Blood from '../../assets/images/blood_bank.png'
 import NavBar from "../../components/Navbar";
+
 import './Emergency.css'
 
 function Emergency() {
@@ -29,7 +30,7 @@ function Emergency() {
             </div>
 
             <div className="emergency-box"
-                onClick={() => navigate("/blood")}
+                onClick={() => navigate("/bloodbank")}
                 style={{ cursor: "pointer" }}
             >
                 <img src={Blood} alt="Blood-image" className='emergency-img' />

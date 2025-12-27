@@ -1,45 +1,109 @@
 /* ================= ROOT VARIABLES ================= */
 :root {
-    --primary-blue: #0b3c6f;
-    --secondary-blue: #eaf2fb;
-    --accent-red: #d32f2f;
-    --text-dark: #1f2933;
-    --text-muted: #6b7280;
-    --card-bg: #ffffff;
-    --page-bg: #def3ff;
-    --emergency-bg: #ff4d4d;
-    --emergency-border: #cc0000;
-    --emergency-text: #ffffff;
+  --primary-blue: #0b3c6f;
+  --secondary-blue: #eaf2fb;
+  --accent-red: #d32f2f;
+  --text-dark: #1f2933;
+  --text-muted: #6b7280;
+  --card-bg: #ffffff;
+  --page-bg: #def3ff;
+  --emergency-bg: #ff4d4d;
+  --emergency-border: #cc0000;
+  --emergency-text: #ffffff;
 }
 
 /* ================= GLOBAL RESET ================= */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Manrope", sans-serif;
-    /* background: #def6ff; */
+.bb-page {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  background:
+    radial-gradient(circle at 15% 20%, rgba(11, 60, 111, 0.06), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(211, 47, 47, 0.04), transparent 45%),
+    linear-gradient(180deg, #ecf4ff, #ffffff 60%);
+
+  }
+
+
+/* ===============  HEADER BAR  =================*/
+
+/* HEADER */
+.bb-header {
+  height: 90px;
+  background: #ffffff;
+  color: var(--primary-blue);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 6px 18px rgba(11, 60, 111, 0.25);
+}
+
+.bb-lo_name {
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+}
+
+.bb-logo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bb-name {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+
+.bb-n1 h1 {
+   margin: 0;
+  font-size: 30px;
+  color: var(--primary-blue);
+}
+
+.bb-n2 {
+  font-size: 18x;
+  color: var(--text-muted);
+}
+
+/* ==================   BloodBank Main  ====================*/
+
+.bb-main {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ================= EMERGENCY BAR ================= */
-.emergency-bar3 {
-  /* position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999; */
 
-  width: 850px;
+.bb-emergency-bar3 {
+  background: #ffffff;
+  width: 900px;
   display: flex;
-  justify-content: center;
   justify-content: space-around;
   gap: 20px;
   margin: 10px;
   padding: 15px;
   border-radius: 18px;
-  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.20);
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.emergency-bar3 a {
+.bb-emergency-bar3 a {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -50,175 +114,208 @@
 }
 
 /* ================= EMERGENCY BUTTON ================= */
-.eme3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 25px;
-    padding: 10px;
-    color: #ffffff;
-    font-weight: 600;
-    width: 400px;
-    height: 50px;
+.bb-eme3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  width: 400px;
+  height: 50px;
 }
 
-.eme3 span{
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 25px;
-    padding: 4px;
+.bb-eme3 span {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 25px;
+  padding: 4px;
 }
 
-.eme3 img{
-    width: 40px;
-    height: 40px;
-    color: #ffffff;
+.bb-eme3 img {
+  width: 40px;
+  height: 40px;
 }
 
 /* ================= LOCATION BUTTON ================= */
-.loc{
-    border-radius: 12px;
-    background: linear-gradient(90deg, #4f8bda 50%, #6aa4e7 100%);
+.bb-loc {
+  border-radius: 12px;
+  background: linear-gradient(90deg, #4f8bda 50%, #6aa4e7 100%);
 }
 
-.loc3 img{
-    width: 50px;
+.bb-loc3 img {
+  width: 50px;
 }
 
 /* ================= EMERGENCY CALL BUTTON ================= */
-.call{
-    border-radius: 12px;
-    background: linear-gradient(90deg, #cb4949f3 50%, #ff6f6f 100%);
+.bb-call {
+  border-radius: 12px;
+  background: linear-gradient(90deg, #cb4949f3 50%, #ff6f6f 100%);
 }
 
 /* ================= EMERGENCY BAR RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .emergency-bar3 {
+  .bb-emergency-bar3 {
     flex-direction: column;
     width: 90%;
     height: auto;
   }
 
-  .eme3 {
+  .bb-eme3 {
     width: 100%;
     margin-bottom: 10px;
   }
 }
 
-/* ============================================================ */
-/* ================= BLOODBANK CONTENT ======================== */
-/* ============================================================ */
+/* ================= BLOODBANK CONTENT ================= */
 
-.bloodbank-content{
-    padding: 20px;
-    width: 1200px;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
+/* ================= BLOOD GROUP ================= */
+/* ================= Blood Group Container ================= */
+.bb-blood_group {
+  margin-top: 16px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 2px; */
+  border-radius: 21px;
+  overflow: hidden; /* important to clip inner borders */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  /* overflow: hidden; */
+  background-color: #e9f1ff;
 }
 
-/* ================= BLOODBANK HEADER ================= */
-.bloodbank-cont-head{
-    margin-bottom: 20px;
-    color: #132638;
-    display: flex;
-    justify-content: center;
+.bb-grpbut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  font-size: 18px;
+  font-weight: 600;
+  border: #0000009c 1px solid;
+  color: #0b3c6f;
+  background-color: #ffffff;
+  transition: ease-in 0.15s;
+}
+
+.bb-grpbut.active {
+  background: #d32f2f;
+  color: #ffffff;
+}
+
+.bb-grpbut:first-child{
+  border-top-left-radius:  21px;
+  border-bottom-left-radius:  21px;
+}
+
+.bb-grpbut:last-child {
+  border-top-right-radius:  21px;
+  border-bottom-right-radius:  21px;
+}
+
+/* ================= Hover ================= */
+.bb-grpbut:hover {
+  background: #e3f0ff;
+  transform: scale(1.04);
+}
+
+/* ================= Active ================= */
+.bb-grpbut.active {
+  background: #d32f2f;
+  color: #ffffff;
+}
+
+/* IMPORTANT: no border-radius here */
+.bb-grpbut.active {
+  border-radius: 0;
+}
+
+
+/* ////////////////////////////////////////////////////////////////// */
+
+.bb-bloodbank-content {
+  padding: 20px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-bloodbank-cont-head {
+  margin-bottom: 20px;
+  color: #132638;
+  display: flex;
+  justify-content: center;
 }
 
 /* ================= BLOODBANK CARD ================= */
-.bloodbank-card-pro {
+.bb-bloodbank-card-pro {
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #f5f9ff, #e6efff);
-  border-radius: 18px;
+  border-radius: 28px;
   overflow: hidden;
-  margin: 0px 0;
   box-shadow: 6px 18px 20px rgba(0,0,0,0.2);
   gap: 10px;
   padding-right: 20px;
 }
 
-.bloodbank-card-pro:hover {
-    transform: translateY(-2px);
-    box-shadow: 8px 22px 25px rgba(0,0,0,0.3);
-    cursor: pointer;
+.bb-bloodbank-card-pro:hover {
+  transform: translateY(-2px);
+  box-shadow: 8px 22px 25px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 
 /* ================= BLOODBANK IMAGE ================= */
-.bloodbank-img {
+.bb-bloodbank-img {
   background: linear-gradient(135deg, #d5e6ff, #e6efff);
   width: 170px;
   height: 100px;
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 18px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-radius: 18px 0 0 18px;
 }
 
-.bloodbank-img img {
+.bb-bloodbank-img img {
   width: 70%;
   height: 80%;
-  display: block;
   border-radius: 18px;
-  background: linear-gradient(135deg, #d5e6ff, #e6efff);
 }
 
 /* ================= BLOODBANK INFO ================= */
-.bloodbank-info {
+.bb-bloodbank-info {
   flex: 1;
 }
 
-.bloodbank-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bloodbank-header h3 {
-  margin: 0;
+.bb-bloodbank-header h3 {
   font-size: 18px;
   font-weight: 600;
   color: #1f2933;
 }
 
 /* ================= STOCK STATUS ================= */
-.stock {
+.bb-stock {
   font-weight: 600;
   font-size: 14px;
   padding: 6px 12px;
   border-radius: 20px;
-  display: inline-block;
 }
 
-.stock.available { background: #5dc28e; color: #ffffff; }
-.stock.low       { background: #ff6f00e3; color: #ffffff; }
-.stock.not       { background: #ff0000; color: #ffffff; }
+.bb-stock.available { background: #5dc28e; color: #fff; }
+.bb-stock.low { background: #ff6f00e3; color: #fff; }
+.bb-stock.not { background: #ff0000; color: #fff; }
 
 /* ================= BLOODBANK ROW ================= */
-.bloodbank-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.bb-bloodbank-row {
   margin-top: 6px;
   font-size: 17px;
   color: #3f4f69;
 }
 
-.icon {
-  font-size: 14px;
-}
-
 /* ================= ACTION BUTTON ================= */
-.bloodbank-action {
-  display: flex;
-  align-items: center;
-}
-
-.track-btn {
+.bb-track-btn {
   background: linear-gradient(135deg, #0067418c, #10b9819c);
   border: none;
   color: white;
@@ -227,207 +324,183 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  gap: 5px;
-  box-shadow: 0 4px 10px rgba(11, 209, 143, 0.31);
 }
 
-.track-btn:hover { transform: translateY(-1px); }
-.track-btn:active { transform: translateY(1px); }
-
 /* ================= BLOODBANK LIST ================= */
-.bloodbank-list {
+.bb-bloodbank-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 60%;
 }
 
-/* ================= BLOODBANK RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .bloodbank-content {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .bloodbank-card-pro {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .bloodbank-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .bloodbank-list {
-    width: 100%;
-  }
-}
-
 /* ================= RIGHT SECTION ================= */
-.bloodbank-cont-right {
+.bb-bloodbank-cont-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 10px;
-  font-size: 17px;
+}
+
+/* ================= LIST + MAP ================= */
+.bb-List-Map {
+  display: flex;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
-/* ================= LIST + MAP ================= */
-.List-Map {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
 /* ================= MAP ================= */
-.BloodBank-Map {
-    margin-top: 0px;
-    width: 35%;
-    height: 350px;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 14px 40px rgba(11, 60, 111, 0.12);
+.bb-BloodBank-Map {
+  width: 35%;
+  height: 350px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  /* padding: 2px; */
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(11, 60, 111, 0.12);
+  border: #132638 solid 1px;
 }
-
-/* ============================================================ */
-/* ================= FOOTER WARNING =========================== */
-/* ============================================================ */
-
-.bfoot {
+.bb-BloodBank-Map iframe {
   width: 100%;
+  height: 100%;
+  border: none;         /* remove default iframe border */
+}
+/* ================= FOOTER ================= */
+.bb-bfoot {
   display: flex;
   justify-content: center;
   margin: 30px 0 40px;
 }
 
-.bloodfoot {
-  width: 90%;
-  max-width: 500px;
-  padding: 14px 20px;
-  display: flex;
-  justify-content: center;
+.bb-footer-wrapper {
+  max-width: 520px;
+  width: 100%;
   text-align: center;
-  gap: 12px;
-  background: linear-gradient(90deg, #ffedc5 0%, #ffeabf 100%);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-  font-size: 16px;
-  font-weight: 600;
-  color: #071121;
 }
 
-.bloodfoot b {
-  color: #d32f2f;
+.bb-footer-alert {
+  font-size: 16px;
+  color: #7a4b00;
+  margin-bottom: 10px;
+}
+
+.bb-footer-actions {
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #ffedc5, #ffeabf);
+  border-radius: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bb-footer-call {
+  color: #001132;
+  text-decoration: none;
   font-weight: 700;
 }
 
-/* ============================================================ */
-/* ================= HEADER + GROUP =========================== */
-/* ============================================================ */
+.bb-footer-note {
+  font-size: 13px;
+  opacity: 0.85;
+  color: #001132;
+}
 
-.head_emerbar{
+
+/* ================= HEADER + GROUP ================= */
+.bb-head_emerbar {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ================= BLOOD GROUP ================= */
-.blood_group{
-  margin-top: 10px;
-  width: 570px;
-  display: flex;
-  justify-content: center;
-  border: #1f293339 solid 1px;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 18px;
-  background: #1919194e;
-  gap: 1px;
-}
 
-.grpbut {
-  cursor: pointer;
-  padding: 8px;
-  width: 70px;
-  gap: 5px;
-  font-family: monospace;
-  font-size: 20px;
-  border: none;
-  text-align: center;
-}
-
-.a{
-  border-bottom-left-radius: 18px;
-  border-top-left-radius: 18px;
-}
-
-.o{
-  border-bottom-right-radius: 18px;
-  border-top-right-radius: 18px;
-}
-
-/* ============================================================ */
-/* ================= IMPROVED BLOOD GROUP ===================== */
-/* ============================================================ */
-
-.blood_group {
-  margin-top: 14px;
-  width: 520px;
-  display: flex;
-  justify-content: center;
-  gap: 1px;
-  /* padding: 10px; */
-  border-radius: 19px;
-  background: #06000069;
-  box-shadow: 0 6px 16px rgba(11, 60, 111, 0.15);
-}
-
-.grpbut {
-  cursor: pointer;
-  padding: 10px;
-  min-width: 64px;
-  font-family: monospace;
-  font-size: 20px;
-  
-  border: 1px solid #dbeafe;
-  background: #ffffff;
-  color: #0b3c6f;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.grpbut:hover {
-  background: #eaf2fb;
-}
-
-.grpbut.active {
-  background: #d32f2f;
-  color: #ffffff;
-  border-color: #d32f2f;
-  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.35);
-}
-
-/* Round ONLY first (A+) and last (O-) buttons */
-
-.blood_group .grpbut:first-child {
-  border-top-left-radius: 19px;
-  border-bottom-left-radius: 19px;
-}
-
-.blood_group .grpbut:last-child {
-  border-top-right-radius: 19px;
-  border-bottom-right-radius: 19px;
-}
-
-
-
-/* ================= WARNING TEXT ================= */
-.warning {
+/* ================= WARNING ================= */
+.bb-warning {
   margin-top: 24px;
   text-align: center;
   color: #132638;
 }
+
+
+/* ===============  MAP MESSAGE  ===============*/
+
+.bb-map-placeholder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+/* ===============  Media Queries  ===============*/
+
+@media (max-width: 1100px) {
+    .bb-List-Map{
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .bb-emergency-bar3{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bb-lo_name{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 0;
+    }
+    .bb-name{
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 700px) {
+  .bb-bloodbank-card-pro{
+    width: 600px;
+  }
+  .bb-hosp{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .bb-blood_group{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 0px;
+  }
+  .bb-grpbut {
+    width: 75px;
+    border-radius: 0;
+  }
+  .bb-grpbut:first-child{
+    border-top-left-radius:  0px;
+    border-bottom-left-radius:  0px;
+  }
+
+  .bb-grpbut:last-child {
+    border-top-right-radius:  0px;
+    border-bottom-right-radius:  0px;
+  }
+}
+
