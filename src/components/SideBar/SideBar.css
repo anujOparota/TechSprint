@@ -11,23 +11,25 @@
 
 /* Sidebar container */
 .sidebar {
-  width: var(--sidebar-width);
-  min-width: var(--sidebar-width);
-  height: 100vh;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 60px;          /* below navbar */
   left: 0;
-  background: var(--bg-grad);
-  color: var(--text-on-accent);
-  padding: 18px 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 12px;
-  box-shadow: 0 8px 24px rgba(2,6,23,0.18);
-  z-index: 40;
-  transition: width 160ms ease;
-  box-sizing: border-box;
+  width: 260px;
+  height: calc(100vh - 60px);
+  background: #0077ff;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.12);
+  z-index: 20;
+}
+
+#SideBar-close{
+    padding:8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #00b97b;
+    color: white;
+    cursor:pointer;
+    font-weight: 600px;
+    margin-bottom: 8px;
 }
 
 /* nav inside sidebar */

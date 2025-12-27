@@ -5,7 +5,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content:left;
   padding: 8px 18px;
   background: #ffffff;
   box-shadow: 0 6px 18px rgba(10, 22, 40, 0.06);
@@ -13,7 +13,7 @@
   top: 0px;
   z-index: 10;
 }
-
+.nav-menu,
 .nav-left,
 .nav-right {
   display: flex;
@@ -21,6 +21,14 @@
   gap: 12px;
   flex: 0 0 auto;
 }
+/*Temporary fix*/
+.nav-menu{
+  margin-right: 40px;
+}
+.nav-left{
+  margin-right: 1000px;
+}
+
 
 .nav-center {
   position: absolute;
