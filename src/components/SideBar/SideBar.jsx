@@ -43,7 +43,7 @@ export default function SideBar({ onClose }) {
           <span className="label">Emergency</span>
         </NavLink>
 
-        <NavLink to="/medicine-inquiry" className="sidebar-item">
+        <NavLink to="/medicineinquiry" className="sidebar-item">
           <Icon>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 12.5v.5a5 5 0 0 1-5 5h-8a5 5 0 0 1-5-5v-.5" />

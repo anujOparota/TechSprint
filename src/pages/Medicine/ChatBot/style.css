@@ -15,9 +15,8 @@ body {
 
     justify-content: flex-start; /* moves container to the left */
     align-items: center;         /* keeps it vertically centered */
-    height: 80vh;
+    height: 65vh;
     margin: 0;
-    padding: 20px;
 
 }
 

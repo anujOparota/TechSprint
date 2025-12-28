@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+.medicine-hero {
+    width: 100%;
+    height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url("A_digital_illustration_features_Turbo_Techies_AI_A.png")
+    no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+}
+
+/* container positioning */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  width: 630px;
+  height: 500px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 650px;
+  margin-top: 150px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+/* header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bot-header-logo {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+}
+
+.bot-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* chat area */
+.chatbox {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* messages */
+.message {
+  display: flex;
+  align-items: flex-end;
+  max-width: 80%;
+}
+
+.message.user {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.message.bot {
+  align-self: flex-start;
+}
+
+.message .text-bubble {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 16px;
+  border-radius: 20px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.message.user .text-bubble {
+  background: rgba(0, 123, 255, 0.9);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot .text-bubble {
+  background: rgba(255, 255, 255, 0.8);
+  color: #1c1e21;
+  border-bottom-left-radius: 4px;
+}
+
+.message.bot img.bot-chat-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* input area */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
+  color: #1c1e21;
+}
+
+input[type="text"]::placeholder {
+  color: #555;
+}
+
+button {
+  background: transparent;
+  color: #007bff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:disabled {
+  color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  color: #0056b3;
+}

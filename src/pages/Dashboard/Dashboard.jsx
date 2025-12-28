@@ -41,7 +41,12 @@ function Dashboard() {
                 <p>Emergemcy</p>
             </div>
 
-            <div className="dash-box" id="medicine-div">
+            <div 
+                className="dash-box" 
+                id="medicine-div"
+                onClick={() => navigate("/medicineinquiry")}
+                style={{ cursor: "pointer" }}
+                >
                 <img src={medicineInquiry} alt="medicine-image" className="dash-img"/>
                 <p>Medicine Inquiry</p>
             </div>

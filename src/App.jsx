@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Form } from "react-router-dom";
+import './App.css'
 
 import Start from './pages/Start/Start'
 import Login from './pages/Auth/Login';
@@ -20,7 +21,8 @@ import SnakeBite from "../src/pages/Emergency/First_Aid/SnakeBite";
 import RoadAccident from "../src/pages/Emergency/First_Aid/RoadAccident";
 import Choking from "../src/pages/Emergency/First_Aid/Choking";
 import Poisoning from "../src/pages/Emergency/First_Aid/Poisoning";
-import './App.css'
+
+import MedicineInquiry from "./pages/Medicine/MedicineInquiry";
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
         <Route path="/first-aid/road-accident" element={<RoadAccident />} />
         <Route path="/first-aid/choking" element={<Choking />} />
         <Route path="/first-aid/poisoning" element={<Poisoning />} />
+
+        <Route path="/medicineinquiry" element={<MedicineInquiry/>} />
       </Routes>
     </BrowserRouter>
   );
