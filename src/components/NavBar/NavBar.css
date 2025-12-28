@@ -5,40 +5,52 @@
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content:left;
+  justify-content: space-between; 
   padding: 8px 18px;
   background: #ffffff;
   box-shadow: 0 6px 18px rgba(10, 22, 40, 0.06);
-  position: absolute; 
-  top: 0px;
-  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
+
 .nav-menu,
 .nav-left,
 .nav-right {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex: 0 0 auto;
-}
-/*Temporary fix*/
-.nav-menu{
-  margin-right: 40px;
-}
-.nav-left{
-  margin-right: 1000px;
+  flex: 1 1 0;
 }
 
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  flex: 0 0 auto; 
+  margin-right: 6px;
+}
 
 .nav-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  pointer-events: none; 
+  pointer-events: none; /* center is decorative */
   font-weight: 700;
   font-size: 1.05rem;
   color: #0874f8;
   letter-spacing: 0.2px;
+
+  max-width: calc(100% - 220px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav-btn {
@@ -56,6 +68,7 @@
   cursor: pointer;
   font-size: 0.95rem;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  flex-shrink: 0; /* prevent button from shrinking too small */
 }
 
 .nav-logout {
@@ -71,8 +84,29 @@
   outline: none;
 }
 
-@media (max-width: 480px) {
-  .app-nav { padding: 8px 12px; height: 56px; }
-  .nav-btn { min-width: 64px; padding: 6px 10px; height: 36px; font-size: 0.9rem; }
-  .nav-center { font-size: 0.98rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60%; }
+@media (max-width: 920px) {
+  .nav-btn { min-width: 72px; padding: 6px 10px; height: 36px; font-size: 0.92rem; }
+  .nav-center { max-width: calc(100% - 160px); font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .nav-btn { min-width: 56px; padding: 6px 8px; height: 34px; font-size: 0.88rem; }
+  .nav-menu { margin-right: 4px; }
+  .nav-left { gap: 8px; }
+  .nav-right { gap: 8px; }
+
+  .nav-center { max-width: calc(100% - 120px); font-size: 0.98rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-btn { transition: none; transform: none; box-shadow: none; }
+}
+
+
+@media (max-width: 450px) {
+  .nav-left .nav-btn {
+    pointer-events: none; 
+    opacity: 0;           
+    cursor: not-allowed;
+  }
 }
