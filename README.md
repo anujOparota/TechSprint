@@ -20,6 +20,7 @@ This project is being developed as part of a **hackathon / academic project** wi
   - Appointments
   - Emergency
   - Medicine Inquiry
+  - AI Assistant
   - Routine Creator
   - Notifications
   - User Records
@@ -32,7 +33,7 @@ This project is being developed as part of a **hackathon / academic project** wi
 ### 🚨 Emergency Module
 
 - Emergency landing page with 3 options:
-  - 🩹 First Aid guidance (AI-assisted)
+  - 🩹 First Aid guidance
   - 🚑 Ambulance request
   - 🩸 Blood request
 
