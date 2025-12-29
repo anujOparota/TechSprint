@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Form } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
 import Start from './pages/Start/Start'
@@ -31,25 +32,25 @@ function App() {
         <Route path="/" element={<Start/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/appointments" element={<Appointments />} />
-        <Route path="/emergency" element={<Emergency/>}/>
-        <Route path="/firstaid" element={<FirstAidPg/>}/>
-        <Route path="/ambulance" element={<AmbulancePg/>}/>
-        <Route path="/bloodbank" element={<Bloodpg/>}/>
-        <Route path="/bookappointment" element={<BookAppointment/>}/>
+        <Route path="/dashboard" element={<ProtectedRoute> <Dashboard /> </ProtectedRoute> } />
+        <Route path="/appointments" element={<ProtectedRoute> <Appointments /> </ProtectedRoute> } />
+        <Route path="/emergency" element={<ProtectedRoute>  <Emergency/>  </ProtectedRoute>}/>
+        <Route path="/firstaid" element={<ProtectedRoute>  <FirstAidPg/>  </ProtectedRoute> }/>
+        <Route path="/ambulance" element={<ProtectedRoute>  <AmbulancePg/>  </ProtectedRoute>}/>
+        <Route path="/bloodbank" element={<ProtectedRoute>  <Bloodpg/>  </ProtectedRoute>}/>
+        <Route path="/bookappointment" element={<ProtectedRoute>  <BookAppointment/>  </ProtectedRoute>}/>
 
 
-        <Route path="/first-aid/burns" element={<Burns />} />
-        <Route path="/first-aid/bleeding" element={<Bleeding />} />
-        <Route path="/first-aid/unconscious" element={<Unconscious />} />
-        <Route path="/first-aid/heart" element={<Heart />} />
-        <Route path="/first-aid/snake-bite" element={<SnakeBite />} />
-        <Route path="/first-aid/road-accident" element={<RoadAccident />} />
-        <Route path="/first-aid/choking" element={<Choking />} />
-        <Route path="/first-aid/poisoning" element={<Poisoning />} />
+        <Route path="/first-aid/burns" element={<ProtectedRoute> <Burns />  </ProtectedRoute>} />
+        <Route path="/first-aid/bleeding" element={<ProtectedRoute> <Bleeding /> </ProtectedRoute>} />
+        <Route path="/first-aid/unconscious" element={<ProtectedRoute> <Unconscious /> </ProtectedRoute>} />
+        <Route path="/first-aid/heart" element={<ProtectedRoute>  <Heart /> </ProtectedRoute>} />
+        <Route path="/first-aid/snake-bite" element={<ProtectedRoute> <SnakeBite /> </ProtectedRoute>} />
+        <Route path="/first-aid/road-accident" element={<ProtectedRoute> <RoadAccident /> </ProtectedRoute>} />
+        <Route path="/first-aid/choking" element={<ProtectedRoute> <Choking /> </ProtectedRoute>} />
+        <Route path="/first-aid/poisoning" element={<ProtectedRoute> <Poisoning /> </ProtectedRoute>} />
 
-        <Route path="/medicineinquiry" element={<MedicineInquiry/>} />
+        <Route path="/medicineinquiry" element={<ProtectedRoute> <MedicineInquiry/> </ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );
