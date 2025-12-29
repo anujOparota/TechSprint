@@ -1,0 +1,72 @@
+.ShowAppointment-container {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.ShowAppointment-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.appointment-table th {
+  background-color: #b4cfe9;
+  color: #1f2933;
+  font-weight: 600;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.appointment-table td {
+  padding: 12px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.appointment-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.delete-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.delete-btn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.03);
+}
+
+.error {
+  color: #dc2626;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.ShowAppointment-container p {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 1rem;
+}

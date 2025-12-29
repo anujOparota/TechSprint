@@ -30,9 +30,9 @@ function Appointments() {
                 Book An Appointment
                 </Link>
 
-                <a href="tel:+911234567890" className="btn btn-ghost" id="appoint-btn2" aria-label="Call now">
-                Call now
-                </a>
+                <Link to="/showappointment" className="btn btn-ghost" id="appoint-btn2" aria-label="show appointment">
+                view Appointments
+                </Link>
           </div>
         </div>
 

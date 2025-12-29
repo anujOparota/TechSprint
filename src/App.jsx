@@ -12,7 +12,7 @@ import FirstAidPg from "./pages/Emergency/First_Aid/FirstAid";
 import AmbulancePg from "./pages/Emergency/Ambulance/Ambulance";
 import Bloodpg from "./pages/Emergency/BloodBank/BloodBank";
 import BookAppointment from "./pages/Appointment/BookAppointment/BookAppointment";
-
+import ShowAppointment from "./pages/Appointment/BookAppointment/ShowAppointment";
 
 import Burns from "../src/pages/Emergency/First_Aid/Burns";
 import Bleeding from "../src/pages/Emergency/First_Aid/Bleeding";
@@ -39,7 +39,7 @@ function App() {
         <Route path="/ambulance" element={<ProtectedRoute>  <AmbulancePg/>  </ProtectedRoute>}/>
         <Route path="/bloodbank" element={<ProtectedRoute>  <Bloodpg/>  </ProtectedRoute>}/>
         <Route path="/bookappointment" element={<ProtectedRoute>  <BookAppointment/>  </ProtectedRoute>}/>
-
+        <Route path="/showappointment" element={<ProtectedRoute>  <ShowAppointment/>  </ProtectedRoute>}/>
 
         <Route path="/first-aid/burns" element={<ProtectedRoute> <Burns />  </ProtectedRoute>} />
         <Route path="/first-aid/bleeding" element={<ProtectedRoute> <Bleeding /> </ProtectedRoute>} />
