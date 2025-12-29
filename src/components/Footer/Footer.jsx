@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="footer-contact" aria-hidden="false">
           <p className="contact-title">Get in touch</p>
           <a className="contact-mail" href="mailto:hello@trubotechies.com">hello@trubotechies.com</a>
-          <p className="contact-note">Mon–Fri · 9am–6pm</p>
+          <p className="contact-note">24 X 7 Support</p>
         </div>
       </div>
 
