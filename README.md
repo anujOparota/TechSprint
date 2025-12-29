@@ -99,6 +99,12 @@ src/
 
 │   ├── Appointment/
 
+│   │     ├── BookAppointment/
+
+│   │     │   ├── BookAppointment.jsx
+
+│   │     │   └── BookAppointment.css
+
 │   │     ├── Appointments.jsx
 
 │   │     └── Appointments.css
@@ -119,15 +125,73 @@ src/
 
 │   ├── Emergency/
 
+│   │     ├── Ambulance
+
+│   │     │   ├── Ambulance.jsx
+
+│   │     │   └── Ambulance.css
+
+│   │     ├── BloodBank
+
+│   │     │   ├── BloodBank.jsx
+
+│   │     │   └── BloodBank.css
+
+│   │     ├── First_Aid
+
+│   │     │   ├── FirstAid.jsx
+
+│   │     │   ├── FirstAid.css
+
+│   │     │   ├── Template.jsx
+
+│   │     │   ├── Bleeding.jsx
+
+│   │     │   ├── Burns.jsx
+
+│   │     │   ├── Choking.jsx
+
+│   │     │   ├── Heart.jsx
+
+│   │     │   ├── Poisoning.jsx
+
+│   │     │   ├── RoadAccident.jsx
+
+│   │     │   ├── SnakeBite.jsx
+
+│   │     │   ├── Unconscious.jsx
+
+│   │     │   └── FirstAidCommon.css
+
 │   │     ├── Emergency.jsx
 
-│   │     ├── FirstAid.jsx
-
-│   │     └── BloodRequest.jsx
+│   │     └── Emergency.css
 
 │   ├── Medicine/
 
-│   │     └── MedicineInquiry.jsx
+│   │     ├── ChatBot
+
+│   │     │   ├── __pycache__/
+
+│   │     │   │   ├── main.cpython-312.pyc
+
+│   │     │   ├── A_digital_illustration_features_Turbo_Techies_AI_A.png
+
+│   │     │   ├── index.html
+
+│   │     │   ├── logo.png
+
+│   │     │   ├── main.py
+
+│   │     │   ├── script.js
+
+│   │     │   └── style.css
+
+│   │     ├── A_digital_illustration_features_Turbo_Techies_AI_A.png
+
+│   │     ├── MedicineInquiry.jsx
+
+│   │     └── MedicineInquiry.css
 
 │   ├── Notification/
 
@@ -137,13 +201,25 @@ src/
 
 │   │     └── RoutineCreate.jsx
 
+│   ├── Start/
+
+│   │     ├── Start.jsx
+
+│   │     └── Start.css
+
 │   └── UserProfile/
 
-│         └── UserRecord.jsx
+│         └── userRecord.jsx
 
 ├── services/
 
+│   └── firebase.js
+
 ├── utils/
+
+│   ├── constants.js
+
+│   └── validators.js
 
 ├── App.jsx
 
