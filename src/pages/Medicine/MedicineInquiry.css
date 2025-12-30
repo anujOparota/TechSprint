@@ -136,7 +136,7 @@ input[type="text"]::placeholder {
   color: #555;
 }
 
-button {
+#sendBtn {
   background: transparent;
   color: #007bff;
   border: none;
@@ -149,11 +149,11 @@ button {
   justify-content: center;
 }
 
-button:disabled {
+#sendBtn:disabled {
   color: #c0c0c0;
   cursor: not-allowed;
 }
 
-button:hover:not(:disabled) {
+#sendBtn:hover:not(:disabled) {
   color: #0056b3;
 }
