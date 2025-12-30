@@ -14,7 +14,7 @@ body { margin: 0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Robo
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, var(--blue), var(--blue-dark));
-  padding: 100px 20px;
+  padding: 50px 20px;
   display: flex;
   justify-content: center;
 }
