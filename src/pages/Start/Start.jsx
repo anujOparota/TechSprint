@@ -9,7 +9,7 @@ function Appointments() {
       <div className="start-hero-inner">
         <div id="start-hero-content">
           <h1 id="start-heading">
-            A AI-Integrated Platform
+            An AI-Integrated Platform
             <br />
             Developed By
             <br />
