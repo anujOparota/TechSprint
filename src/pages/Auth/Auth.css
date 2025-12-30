@@ -1,48 +1,76 @@
-.Auth-div{
+.Auth-div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+
   background-color: #c4ddfc;
-  height: 500px;
-  width: 400px;
   color: black;
-  margin-top: 50px;
+
+  width: 400px;
+  height: 500px;
+
+  max-width: 90vw;
+  aspect-ratio: 4 / 5;
+
+  margin: 80px auto;
   border-radius: 5%;
   box-shadow: 0 0 2em #646cffaa;
 }
 
-.Auth-form{
+.Auth-form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
-.Auth-input{
+.Auth-input {
   width: 300px;
+  max-width: 85%;
   height: 35px;
-  color:black;
+
+  color: black;
   background-color: #cecece;
   border: none;
   padding-left: 10px;
+  border-radius: 4px;
 }
 
-.Auth-btn{
+.Auth-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 320px;
+  max-width: 90%;
+  height: 50px;
+
   border-radius: 8px;
   border: 1px solid transparent;
   color: white;
   background-color: #00ce89;
   font-size: medium;
-  height: 50px;
-  width: 320px;
   transition: border-color 0.25s;
 }
 
-.Auth-btn:hover{
+.Auth-btn:hover {
   border-color: #454dda;
+}
+
+@media (max-width: 480px) {
+  .Auth-div {
+    gap: 16px;
+    margin-top: 80px;
+  }
+
+  .Auth-input {
+    height: 38px;
+  }
+
+  .Auth-btn {
+    height: 48px;
+  }
 }
