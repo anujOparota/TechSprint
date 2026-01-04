@@ -44,11 +44,14 @@ function Dashboard() {
             <div 
                 className="dash-box" 
                 id="medicine-div"
-                onClick={() => navigate("/medicineinquiry")}
-                style={{ cursor: "pointer" }}
+                
+                /* onClick={() => navigate("/medicineinquiry")}
+                style={{ cursor: "pointer" }} */
                 >
+                <a href="src\pages\Medicine\ChatBot\index.html">    
                 <img src={medicineInquiry} alt="medicine-image" className="dash-img"/>
                 <p>Medicine Inquiry</p>
+                 </a>
             </div>
 
             {/* This is the AI Assistant section */}
