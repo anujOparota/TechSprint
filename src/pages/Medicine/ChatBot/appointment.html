@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Page</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+  
+    <link rel="stylesheet" href="style-appointment.css">
+
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <button class="close-button" id="close-menu">Close</button>
+
+        <ul class="menu-list">
+            <li>
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointment</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Emergency</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-notes-medical"></i>
+                <span>Medical Inquiry</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-robot"></i>
+                <span>AI Assistant</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-list-check"></i>
+                <span>Create Routine</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-bell"></i>
+                <span>Notifications</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-user"></i>
+                <span>User Profile</span>
+            </li>
+        </ul>
+    </aside>
+
+    <header class="navbar"> 
+        <div class="left-buttons">
+            <button class="menu" id="open-menu">Menu</button>
+            <button class="Dashboard">Dashboard</button>
+        </div>
+
+        <div class="center-name">
+            Turbo Techies
+        </div>
+
+        <div class="right-buttons">
+            <button class="logout">LogOut</button>
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="left-text">
+            <h1>
+                Book Your Doctor<br>
+                Appoitment Now!<br>
+                Online.<br>
+            </h1>
+
+            <p>
+                A healthier Tomorrow starts today: schedule your appointment.<br>
+                Your wellness, our expertise: set up your appointment now.
+            </p>
+
+            <div class="left-down-buttons">
+                <a href="appointment-select.html" class="sidebar-link">
+                    <button class="book">Book An Appointment</button>
+                </a>
+                <button class="view">View Appointment</button>
+            </div>
+
+
+        </div>
+
+        
+
+        <div class="right-img">
+            <div class="doctor-card">
+                <img src="Doctor.png" alt="doctor-image">
+            </div>
+        </div>
+            
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

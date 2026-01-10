@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment select</Select></title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style-appointment.css">
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <button class="close-button" id="close-menu">Close</button>
+
+        <ul class="menu-list">
+            <a href="appointment.html" class="sidebar-link">
+                <li>
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointment</span>
+                </li>
+            </a>
+            
+
+            <li>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Emergency</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-notes-medical"></i>
+                <span>Medical Inquiry</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-robot"></i>
+                <span>AI Assistant</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-list-check"></i>
+                <span>Create Routine</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-bell"></i>
+                <span>Notifications</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-user"></i>
+                <span>User Profile</span>
+            </li>
+        </ul>
+    </aside>
+
+    <header class="navbar"> 
+        <div class="left-buttons">
+            <button class="menu" id="open-menu">Menu</button>
+            <button class="Dashboard">Dashboard</button>
+        </div>
+
+        <div class="center-name">
+            Turbo Techies
+        </div>
+
+        <div class="right-buttons">
+            <button class="logout">LogOut</button>
+        </div>
+    </header>
+
+    <section class="main-section-appointment">
+        <div class="card">
+            <div class="headline">
+                <h1>Book Appointment</h1>
+            </div>
+
+            <div class="card-body">
+
+            <div class="left-section">
+
+                <div class="select-doctor">
+                    <select name="doctor" id="doctor">
+                        <option value="" disabled selected>Select Doctor</option>
+                        <option value="anuj-parota">Dr. Anuj Parota - Cardiologist</option>
+                        <option value="suyash-pawar">Dr. Suyash Pawar - Dermatologist</option>
+                        <option value="om-nimbarte">Dr. Om Nimbarte - Pediatrician</option>
+                        <option value="mohit-soni">Dr. Mohit Soni - Neurologist</option>
+                        <option value="raj-mane">Dr. Raj Mane - Orthopedic Surgeon</option>
+                    </select>
+                </div>
+
+
+                <div class="Enter-age">
+                    <input class="form-control" type="text" placeholder="Enter Age">
+                </div>
+
+                <div class="select-date">
+                    <input class="form-control" type="date" placeholder="Select Date">
+                </div>
+
+            </div>
+
+            <div class="right-section">
+
+                <div class="patient-name">
+                    <input class="form-control" type="text" placeholder="Patient Name">
+                </div>
+
+                <div class="select-gender">
+                    <select name="gender" id="gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>    
+                </div>
+
+                <div class="select-time">
+                    <input class="form-control" type="time" placeholder="Select Time">
+                </div>
+
+            </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
